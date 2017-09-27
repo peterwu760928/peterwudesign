@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>Peter Wu Web Design</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/layout.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/skrollr.min.js"></script>
+<script src="js/mine.js"></script>
+</head>
+<body>
+<div id='loading'>
+    <div class="LogoMove">
+    <div class="LogoMoveMain">
+        <div class="LogoMove1"></div>
+        <div class="LogoMove2"></div>
+    </div>
+</div>
+</div>
+<div class="LoadingBg"></div>
+<div class="No"><p>No landscape</p></div>
+<div class="TimeLine" data-0="width:0%;" data-end="width:100%;"></div>
+<div class="Header">
+  <div class="Logo"><a href="#"></a></div>
+  <ul class="Nav">
+    <li class="Index"><a>異想</a></li>
+    <li class="Work"><a>現實</a></li>
+  </ul>
+  <div class="MusicBtn">
+      <div class="MusicBth1">
+          <ul>
+            <li class="First"></li>
+            <li class="Secend"></li>
+            <li class="Thrid"></li>
+          </ul>
+      </div>
+      <div class="MusicBth2">
+          <ul>
+            <li class="First"></li>
+            <li class="Secend"></li>
+            <li class="Thrid"></li>
+          </ul>
+      </div>
+  </div>
+</div>
+<div class="Main2" data-500="display:none;" data-550="display:block;opacity:0;" data-1500="opacity:1;" ></div>
+<div class="Main1">
+	<div class="Title" data-0="opacity:1;transform[swing]:scale(1);" data-1000="opacity:0;transform[swing]:scale(.5);">
+      <div class="Title1"></div>
+      <div class="Title2"></div>
+      </div>
+      <div class="Go"><div class="GoMove"></div></div> 
+	<div class="Mountain1" data-0="transform[swing]:scale(1);" data-1500="transform:scale(2.3);"></div>
+    <div class="Mountain2" data-0="transform[swing]:scale(1);" data-1500="transform:scale(1.3);" >
+    <div class="Fag" id="Fag3"></div>
+    <div class="Fag" id="Fag4"></div>
+    </div>
+    
+    <div class="Mountain3" data-0="transform[swing]:scale(1);" data-1500="transform:scale(1.1);">
+    <div class="Stone1"></div><div class="Stone2"></div><div class="Stone3"></div>
+    <div class="Fag" id="Fag1"></div>
+    <div class="Fag" id="Fag2"></div>
+    <div class="Water"></div>
+    </div>
+    <div class="Eagle" data-500="transform[swing]:scale(0.1) rotate(30deg);top:115%;left:0%;"  data-1500="transform[swing]:scale(1.6) rotate(0deg);;top:0%;left:100%;" data-1600="transform[swing]:scale(1.3) rotate(0deg);;top:-50%;left:100%;"></div>
+    <div class="Sky1" data-0="transform[swing]:scale(1);" data-1500="transform:scale(1.1);" ></div>
+    <div class="Sky2" data-0="transform[swing]:scale(1);" data-1500="transform:scale(1.1);" ></div>
+</div>
+<div class="ShadowBg" data-1500="opacity:0;" data-2500="opacity:1;"></div>
+<div class="Main3"  data-1500="top:105%;transform:translate(0,1%);" data-2500="top:50%;transform:translate(0 ,-50%);">
+<div class="Pic"><div class="PicO"></div></div>
+        <h1 class="ArticleTitle">嗨！我是彼得吳</h1>
+        <p class="ArticleWord">歡迎來到夢的異想世界，這裡是飛瀑峽谷。</br>寧靜的夜晚、絢麗的極光、無盡的山巒、壯闊的瀑布、蒼白的雪狼、嘹亮的鷹嘨！</br>這裡很美吧！和我一起去探險好嗎？夢境裡，迫不及待的走向這未知的領域，是我前進的動力。</br>路上也許會有暴風雨，但我不要只為了等待暴風雨離去，而是要學習如何在雨中快樂的跳舞。</br>我如滄海一粟，探索這世界的美好！前進吧彼得！切記，莫忘初心。</p>
+        <div class="ArticleBtn"><a>回到現實</a></div>
+</div>
+ <div class="ColorBar" data-500="display:none;" data-1500="display:block;opacity:0;" data-2500="opacity:1;" ></div>
+ <div class="End"></div>
+
+<div class="Scrollbar" data-0="top:0%;margin-top:2px;" data-end="top:100%;margin-top:-52px;"></div>
+
+<div id="myModal">
+ <audio class="Music"  controls autoplay loop>
+   <source src="images/music.mp3">
+ </audio>
+</div>
+
+</body>
+
+<script type="text/javascript">
+	var s = skrollr.init({
+		edgeStrategy: 'set',
+		easing: {
+			WTF: Math.random,
+			inverted: function(p) {
+				return 1-p;
+			}
+		}
+	});
+</script>
+<script type="text/javascript">
+  function MistMove1(){
+    $("#Fag1").css({
+      'left':'100%',
+    });
+    $("#Fag1").animate({left:"-100%"},30000,function(){
+      MistMove1()
+    });     
+  }
+  function MistMove2(){
+    $("#Fag2").css({
+      'left':'100%',
+    });
+    $("#Fag2").delay(5000).animate({left:"-100%"},50000,function(){
+      MistMove2()
+    });     
+  }
+  function MistMove3(){
+    $("#Fag3").css({
+      'left':'100%',
+    });
+    $("#Fag3").delay(10000).animate({left:"-100%"},25000,function(){
+      MistMove3()
+    });     
+  }
+  function MistMove4(){
+    $("#Fag4").css({
+      'left':'100%',
+    });
+    $("#Fag4").delay(15000).animate({left:"-100%"},40000,function(){
+      MistMove3()
+    });     
+  }
+MistMove1();
+MistMove2();
+MistMove3();
+MistMove4();
+
+    var $docCenter = $(document).width() / 2;
+    $(document).mousemove(function (e) {
+
+
+        if ($docCenter - e.pageX > 0) {
+            $(".Title2").css("left", 50 + ((e.pageX - $docCenter) * -0.006) + "%");
+        } else {
+            $(".Title2").css("left", 50 - (($docCenter - e.pageX) * -0.006) + "%");
+        }
+        if ($docCenter - e.pageX > 0) {
+            $(".Title1").css("left", 50 - ((e.pageX - $docCenter) * -0.003) + "%");
+        } else {
+            $(".Title1").css("left", 50 + (($docCenter - e.pageX) * -0.003) + "%");
+        }
+    });
+	
+	$(".Title").click(function() {
+    $('body,html').stop().animate({
+        scrollTop: $(" .End").offset().top
+    }, 1500);	
+	});
+
+	$(".Title").hover(function() {
+	   $(".Sky2").addClass('Active');
+	 }, function() {
+	   $(".Sky2").removeClass('Active');
+	 });
+
+    $('.MusicBth1').click(function(){
+        $('.Music').remove();
+        $('.MusicBth1').addClass('Active');
+        $('.MusicBth2').addClass('Active');
+    });
+
+    $('.MusicBth2').click(function(){
+        $("#myModal").html('<audio class="Music"  controls autoplay loop><source src="images/music.mp3"></audio>'); 
+        $('.MusicBth1').removeClass('Active');
+        $('.MusicBth2').removeClass('Active');
+    });
+
+</script>
+
+<!-- <script type="text/javascript">
+    var animation = bodymovin.loadAnimation({
+      container: document.getElementById('bm'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'data.json'
+    })
+</script>  -->
+
+
+</html>
